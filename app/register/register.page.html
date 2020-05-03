@@ -1,0 +1,90 @@
+<ion-content class="ion-padding">
+  <div class="outer animation-login" id="welcom">
+    <ion-row class="outer-row">
+      <ion-col class="ion-text-center">
+        <img class="logo anim" id="logo" src="assets/img/logo.png" />
+      </ion-col>
+    </ion-row>
+
+    <div class="box">
+      <div class="action-btns">
+        <span (click)="selectedPage='login'"
+          [ngClass]="{'select-page' : selectedPage=='login'}">{{'SIGN_IN'| translate}}</span>
+        <span class="div-horizontal"></span>
+        <span (click)="selectedPage='signup'"
+          [ngClass]="{'select-page' : selectedPage=='signup'}">{{'SIGN_UP'| translate}}</span>
+      </div>
+      <div [ngSwitch]="selectedPage">
+        <div *ngSwitchCase="'login'">
+          <div class="form">
+            <div>
+              <ion-item no-padding>
+                <ion-label position="floating">{{'EMAIL'| translate}}</ion-label>
+                <ion-input type="email" [(ngModel)]="userInfo.email"></ion-input>
+              </ion-item>
+            </div>
+
+            <div class="password-sect div">
+              <span (click)="changePasswordType();">
+                <ion-icon [name]="passwordType == 'password' ? 'ios-eye' : 'ios-eye-off'" class="eye-icon"></ion-icon>
+              </span>
+              <ion-item no-padding>
+                <ion-label position="floating">{{'PASSWORD'| translate}}</ion-label>
+                <ion-input maxlength="50" type="{{passwordType}}" [(ngModel)]="userInfo.password">
+                </ion-input>
+              </ion-item>
+            </div>
+
+            <ion-button class="round login-btn" shape="round" expand="full" (click)="loginUser();"
+              [disabled]="isLoading">
+              <span *ngIf="!isLoading">{{'SIGN_IN'| translate}}</span>
+              <span *ngIf="isLoading">
+                <ion-spinner color="light"></ion-spinner>
+              </span>
+            </ion-button>
+
+            <div class="ion-text-end forgot-password">
+              <a (click)="forgetPasswordModal();">{{'FORGOT_PASSWORD'| translate}}</a>
+            </div>
+          </div>
+        </div>
+        <div *ngSwitchCase="'signup'">
+          <div class="form">
+
+            <ion-item no-padding>
+              <ion-label position="floating">{{'NAME'| translate}}</ion-label>
+              <ion-input class="ion-text-capitalize" [(ngModel)]="userInfo.name"></ion-input>
+            </ion-item>
+
+
+            <ion-item no-padding>
+              <ion-label position="floating">{{'EMAIL'| translate}}</ion-label>
+              <ion-input maxlength="50" type="email" [(ngModel)]="userInfo.email"></ion-input>
+            </ion-item>
+
+            <div class="password-sect div">
+              <span (click)="changePasswordType();">
+                <ion-icon [name]="passwordType == 'password' ? 'ios-eye' : 'ios-eye-off'" class="eye-icon"></ion-icon>
+              </span>
+
+              <ion-item no-padding>
+                <ion-label position="floating">{{'PASSWORD'| translate}}</ion-label>
+                <ion-input maxlength="50" type="{{passwordType}}" [(ngModel)]="userInfo.password">
+                </ion-input>
+              </ion-item>
+
+            </div>
+
+            <ion-button class="round" shape="round" expand="full" (click)="signUpUser();" [disabled]="isLoading">
+              <span *ngIf="!isLoading">{{'SIGN_UP'| translate}}</span>
+              <span *ngIf="isLoading">
+                <ion-spinner color="light"></ion-spinner>
+              </span>
+            </ion-button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</ion-content>

@@ -1,0 +1,20 @@
+ion-searchbar {
+    padding      : 0;
+    margin-bottom: 15px;
+}
+
+.search-results {
+    text-align: center;
+    margin-top: 25px;
+
+    p {
+        margin-bottom: 0;
+        font-weight  : bold;
+        font-size    : 18px;
+    }
+
+    div {
+        margin-top: 5px;
+        font-size : 14px;
+    }
+}

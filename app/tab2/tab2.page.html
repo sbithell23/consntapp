@@ -1,0 +1,39 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>
+      <img src="../../assets/img/logo.png" width="75%" />
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding list-outer">
+  <div class="search-outer">
+    <ion-searchbar placeholder="Entery name here" (ionInput)="searchOnGetItems($event)" (ionCancel)="searchOnCancel()"
+      (ionClear)="searchOnCancel()" animated>
+    </ion-searchbar>
+  </div>
+
+  <div class="list" *ngFor="let record of allRecords">
+    <h1 class="name substringText" style="-webkit-box-orient: vertical !important;">{{record.name}}</h1>
+    <div class="date-added">{{record.dateAdded | fromNow}}</div>
+    <p class="purpose substringText" style="-webkit-box-orient: vertical !important;-webkit-line-clamp:2 !important">
+      {{record.purpose}}
+    </p>
+    <div class="footer">
+      <span>Expiry: {{record.expiryDate}}</span>
+      <div class="footer-content">
+        <div class="dFlex icon-div">
+          <ion-icon name="ios-photos" *ngIf="record.images?.length"
+            [ngClass]="{'border-right' : (record.audios?.length)}"></ion-icon>
+          <ion-icon name="ios-recording" *ngIf="record.audios?.length"></ion-icon>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div *ngIf="allRecords?.length ==0" class="search-results">
+    <p>Enter the name to search the record</p>
+    <div>Search result be shown here</div>
+  </div>
+
+</ion-content>

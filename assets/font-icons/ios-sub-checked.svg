@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Generator: Adobe Illustrator 22.1.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 512 512" style="enable-background:new 0 0 512 512;" xml:space="preserve">
+<style type="text/css">
+	.st0{fill:none;}
+	.st1{clip-path:url(#SVGID_2_);}
+	.st2{fill:#FFFFFF;}
+</style>
+<g>
+	<g>
+		<defs>
+			<path id="SVGID_1_" d="M126.3,256c0,71.7,58.1,129.7,129.7,129.7S385.7,327.6,385.7,256S327.6,126.3,256,126.3
+				S126.3,184.3,126.3,256"/>
+		</defs>
+		<clipPath id="SVGID_2_">
+			<use xlink:href="#SVGID_1_"  style="overflow:visible;"/>
+		</clipPath>
+		<g class="st1">
+			<defs>
+				<rect id="SVGID_3_" x="105.2" y="104.1" width="301.6" height="304.6"/>
+			</defs>
+			<clipPath id="SVGID_4_">
+				<use xlink:href="#SVGID_3_"  style="overflow:visible;"/>
+			</clipPath>
+			<g transform="matrix(1 0 0 1 0 -7.629395e-06)" style="clip-path:url(#SVGID_4_);">
+				
+					<image style="overflow:visible;" width="99" height="98" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAGMAAABiCAIAAADLBfpnAAAACXBIWXMAAAsSAAALEgHS3X78AAAA
+GXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAARVJREFUeNrs3IENgzAMRFFA3Z8h
+WIW5HCZAOqSIRPR5hNO/b6dVux77uZhgNhGE82utSQFTkhrSvirtw1Rno8sgTGoRlfb1bt8qhLB9
+dh+mGN2VMD1TsnIlaB+jY4rRMWV4ClOvJMVTLs/uTAkBUzyFKZ7C1H8xVaDSPu0b9kIGFaZ4ClNe
+Mx9JSgbx7hMCphid0d1THzE6pWOK0TFl97nR3ejmhilZYcruc0/NzVRZfqnRSwhhUn61lraP0hnd
+awZT01+eoMKU14z2aZ/2YcrwFKZ4ClM8pX1G+x4wJYM0Kf+TFyblG4c4KUoPk/J1X5qU8jE6ozM6
+o2PKa8a4ErRP+6Yan0/lTGkfpuy+UTe69mVzCTAAGJV7y8LNSJgAAAAASUVORK5CYII=" transform="matrix(0 3.0771 -3.0771 0 406.7812 104.0736)">
+				</image>
+			</g>
+		</g>
+	</g>
+	<g>
+		<path class="st2" d="M256,392.4c-75.2,0-136.4-61.2-136.4-136.4S180.8,119.6,256,119.6S392.4,180.8,392.4,256
+			S331.2,392.4,256,392.4z M256,132.9c-67.9,0-123.1,55.2-123.1,123.1S188.1,379.1,256,379.1S379.1,323.8,379.1,256
+			S323.9,132.9,256,132.9z"/>
+	</g>
+	<g>
+		<polygon class="st2" points="239.6,312.7 183,256 202.8,236.2 239.6,273 309.2,203.5 329,223.3 		"/>
+	</g>
+</g>
+</svg>

@@ -1,0 +1,55 @@
+<ion-header>
+    <ion-toolbar>
+        <ion-title>
+            <img src="../../assets/img/logo.png" width="75%" />
+        </ion-title>
+    </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+    <div class="setting-outer">
+        <div class="image-section">
+            <div class="user-image"
+                [ngStyle]="{ 'background-image': !user?.userProfile ? 'url(assets/img/UserImg.png)' : 'url('+user?.userProfile+')' }">
+            </div>
+            <div>
+                <h1 class="ion-no-margin" class="ion-text-capitalize user-name">{{user.name}}</h1>
+                <p class="ion-no-margin" class="email">{{user.email}}</p>
+                <p class="ion-no-margin" class="edit-profile">{{'EDIT_PROFILE' | translate}}</p>
+            </div>
+        </div>
+        <div class="divider"></div>
+        <div>
+            <div class="display-flex-setting display-flex">
+                <ion-icon name="ios-lock" class="margin-r-10"></ion-icon>
+                <p class="ion-no-margin">{{'SECURITY' | translate}}</p>
+                <ion-icon name="ios-next-icon" class="next-icon"></ion-icon>
+            </div>
+            <div class="divider"></div>
+            <div class="display-flex-setting display-flex">
+                <ion-icon name="ios-privacy" class="margin-r-10"></ion-icon>
+                <p class="ion-no-margin">{{'PRIVACY_POLICY' | translate}}</p>
+                <ion-icon name="ios-next-icon" class="next-icon"></ion-icon>
+            </div>
+            <div class="divider"></div>
+            <div class="display-flex-setting display-flex">
+                <ion-icon name="ios-terms" class="margin-r-10"></ion-icon>
+                <p class="ion-no-margin">{{'TERMS_OF_USE' | translate}}</p>
+                <ion-icon name="ios-next-icon" class="next-icon"></ion-icon>
+            </div>
+            <div class="divider"></div>
+            <div class="display-flex-setting display-flex">
+                <ion-icon name="ios-tutorials" class="margin-r-10"></ion-icon>
+                <p class="ion-no-margin">{{'TUTORIALS' | translate}}</p>
+                <ion-icon name="ios-next-icon" class="next-icon"></ion-icon>
+            </div>
+            <div class="divider"></div>
+            <div class="display-flex-setting display-flex" (click)="signoutProcess();">
+                <ion-icon name="ios-signout" class="margin-r-10"></ion-icon>
+                <p class="ion-no-margin">{{'SIGN_OUT' | translate}}</p>
+                <ion-icon name="ios-next-icon" class="next-icon"></ion-icon>
+            </div>
+            <div class="divider"></div>
+        </div>
+    </div>
+</ion-content>

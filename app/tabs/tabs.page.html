@@ -1,0 +1,25 @@
+<ion-tabs #tabs>
+    <ion-tab-bar slot="bottom">
+        <ion-tab-button tab="tab1" (click)="selecteTab('tab1');">
+            <ion-icon [name]="selectedTab == 'tab1' ? 'ios-home-enable' :'ios-tab-home'"></ion-icon>
+            <ion-label>Home</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab2" (click)="selecteTab('tab2');">
+            <ion-icon [name]="selectedTab == 'tab2' ? 'ios-gallery-enable' :'ios-tab-gallery'"></ion-icon>
+            <ion-label>Search</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab4" (click)="selecteTab('tab4');">
+            <ion-icon [name]="selectedTab == 'tab4' ? 'ios-heart-enable' :'ios-tab-heart'"></ion-icon>
+            <ion-label>Favourite</ion-label>
+        </ion-tab-button>
+
+        <ion-tab-button tab="tab3" (click)="selecteTab('tab3');">
+            <ion-icon [name]="selectedTab == 'tab3' ? 'ios-account-enable' :'ios-tab-account'"></ion-icon>
+            <ion-label>Accounts</ion-label>
+        </ion-tab-button>
+
+    </ion-tab-bar>
+
+</ion-tabs>

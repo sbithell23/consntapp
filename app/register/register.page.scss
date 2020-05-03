@@ -1,0 +1,112 @@
+.outer {
+    padding-top: 3vh;
+
+    .label-floating {
+        position: relative;
+        top     : 10px;
+    }
+
+    .outer-row {
+
+        .text-outer {
+            display    : flex;
+            align-items: center;
+        }
+    }
+
+    .logo {
+        height      : 130px;
+    }
+
+    .welcom-text {
+        padding-left: 10px;
+        font-size   : 27px;
+        font-weight : 900;
+        line-height : 1;
+    }
+
+    .box {
+        position: relative;
+
+        .action-btns {
+            padding-top  : 10px;
+            padding-left : 10px;
+            margin-bottom: 3px;
+
+            span {
+                font-size   : 24px;
+                margin-right: 20px;
+                color       : #9c9c9c;
+                font-weight : bold;
+            }
+
+            .select-page {
+                color: var(--theme-color);
+            }
+        }
+
+        .form {
+            padding: 0 9px;
+
+            .div {
+                margin-bottom: 20px;
+                color        : var(--theme-color);
+            }
+
+            .input-heading {
+                font-weight: bold;
+            }
+
+            ion-label {
+                color: #888;
+            }
+
+            ion-input {
+                color        : black;
+                border-bottom: 1px solid #d0d0d0;
+            }
+
+            ion-item{
+                margin-left: -13px;
+            }
+        }
+
+        .forgot-password {
+            margin-top: 17px !important;
+
+            a {
+                font-weight: bold;
+                color      : grey;
+            }
+        }
+
+        .password-sect {
+            position: relative;
+
+            .eye-icon {
+                position  : absolute;
+                right     : 0px;
+                z-index   : 101;
+                margin-top: 35px;
+            }
+        }
+    }
+
+    .div-horizontal {
+        border: 0.5px solid #ccc;
+    }
+
+    .login-btn {
+        margin-top: 25px;
+    }
+}
+
+.animation-login {
+    transition: all 0.5s ease;
+    position  : relative;
+}
+
+.name-field {
+    margin-bottom: -17px;
+    margin-top   : 20px;
+}

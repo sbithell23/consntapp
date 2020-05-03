@@ -1,0 +1,13 @@
+<div class="outer">
+    <div class="main_div">
+        <div class="play-pause-btn" (click)="playpauseAudio();">
+            <ion-icon class="pause-btn" *ngIf="audio.isAudioPlaying" name="ios-audio-pause"></ion-icon>
+            <ion-icon *ngIf="!audio.isAudioPlaying" name="ios-audio-play"></ion-icon>
+        </div>
+        <div class="inner-div">
+            <ion-range (click)="changeAudioPosition();" [(ngModel)]="audio.currentAudioPosition" class="audio-range" min="0" max="{{audio.audioDuration}}" color="primary" no-padding></ion-range>
+            {{audio?.totalTime}}
+        </div>
+    </div>
+    <span class="time" *ngIf="time !=''">{{time}}</span>
+</div>

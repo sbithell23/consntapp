@@ -1,0 +1,102 @@
+.heading-text {
+    margin-top: 0;
+    text-align: center;
+}
+
+.outer-form {
+    ion-input,ion-textarea {
+        margin-bottom: 15px;
+        border-bottom: 1px solid #dedede;
+    }
+
+    .date-selection {
+        margin-top     : 20px;
+        display        : flex;
+        align-items    : center;
+        justify-content: space-between;
+    }
+
+    .select-media {
+        margin-top: 10vh;
+        text-align: center;
+
+        span {
+            display      : inline-flex;
+            color        : var(--theme-color);
+            border       : 1px solid;
+            border-radius: 10em;
+            padding      : 10px 30px;
+            margin-top   : 20px;
+
+            &:focus,
+            &:active {
+                color : #29919a;
+                border: 1px solid #29919a;
+            }
+        }
+    }
+}
+
+.media-content {
+    .video-section {
+        position: relative;
+        padding: 10px 0px;
+        .close-btn {
+            font-size: 20px;
+            position: absolute;
+            right: -6px;
+            top: -2px;
+            z-index: 999;
+        }
+    }
+    .divider {
+        margin-top: 10px !important;
+    }
+}
+
+.scrolling-wrapper-flexbox {
+    // margin-top: 15px;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    height: 90px;
+    padding-top: 10px;
+    .card {
+        flex: 0 0 auto;
+        display: flex;
+        height: 75px;
+        width: 75px;
+        border-radius: 6px;
+        margin-right: 10px;
+        position: relative;
+        ion-icon {
+            background: aliceblue;
+            position: absolute;
+            margin-top: -10px;
+            margin-left: 55px;
+            border-radius: 50%;
+            color: var(--theme-color);
+        }
+        .img-div {
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            width: 100%;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
+.shared-person {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+    app-audio-player {
+        width: 90%;
+    }
+    .date {
+        font-size: 13px;
+    }
+}

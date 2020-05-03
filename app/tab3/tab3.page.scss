@@ -1,0 +1,148 @@
+.setting-outer {
+    .image-outer {
+        border: 3px solid var(--theme-color);
+        padding: 4px;
+        height: 100px;
+        width: 100px;
+        border-radius: 50%;
+        margin: 0 auto;
+        margin-top: 20px;
+        box-shadow: 0 0 20px #afaeae;
+        background: transparent;
+        position: relative;
+        top: 10px;
+
+        .image {
+            height: 85px;
+            width: 85px;
+            border-radius: 50%;
+            margin: 0 auto;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+
+    .outer {
+        .heading {
+            font-weight: normal;
+            font-size: 18px !important;
+            color: var(--theme-color);
+            padding-left: 16px;
+            font-weight: 600;
+
+            // margin-top: 25px;
+            margin-top: 33px;
+            margin-bottom: 0;
+        }
+
+        .options-box {
+            background: #f8f8f8;
+            border-top: 1px solid #abababbd;
+            border-bottom: 1px solid #abababbd;
+            padding: 0 12px 0 16px;
+
+            ion-row {
+                border-bottom: 1px solid #abababbd;
+                padding-bottom: 10px;
+
+                // margin-bottom: 10px;
+                ion-col {
+                    span {
+                        position: relative;
+                        top: -2px;
+                    }
+                }
+            }
+
+            ion-row:last-child {
+                border-bottom: 0;
+                padding-bottom: 5px;
+                margin-bottom: 0px;
+            }
+        }
+
+        .text {
+            // color: #d6d6d6;
+            padding-top: 15px;
+        }
+
+        .next-icon {
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+
+            ion-icon {
+                font-size: 18px;
+                color: #7162a8;
+            }
+        }
+
+        .beyond-me-present {
+            margin-top: -12px;
+            position: absolute;
+            margin-left: 3px;
+            font-size: 35px;
+            color: green;
+        }
+
+        ._edit {
+            font-size: 14px;
+            padding-right: 14px;
+            font-weight: 600;
+            color: rgb(89, 166, 214);
+            padding-top: 14px;
+            margin-bottom: 1px;
+            margin-top: 24px;
+        }
+    }
+
+    ._icon {
+        position: relative;
+        right: -6px;
+    }
+
+    .camera-icon {
+        position: relative;
+        left: 27px;
+        bottom: 10px;
+        background: white;
+        padding: 2px;
+        border-radius: 50%;
+    }
+
+    //new UI
+
+    .image-section {
+        display: flex;
+        align-items: center;
+        padding: 16px 0 12px 0;
+
+        .user-image {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            margin-right: 20px;
+            border: 1px solid #ccc;
+            background-position: center;
+            background-size: cover;
+            background-repeat: no-repeat;
+        }
+
+        .user-name{
+            margin-bottom: 0;
+        }
+
+        .email {
+            color: #848484;
+            margin-bottom: 4px;
+            margin-top: 0;
+        }
+
+        .edit-profile {
+            color: var(--theme-color);
+            font-size: 14px;
+            font-weight: bold;
+        }
+    }
+}

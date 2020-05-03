@@ -1,0 +1,63 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button (click)="goBack();">
+        <ion-icon slot="icon-only" name="ios-header-back"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    <ion-title>
+      Add New Record
+    </ion-title>
+    <ion-buttons slot="end">
+      <ion-button [disabled]="isSaving" (click)="saveRecord();">
+        <span *ngIf="!isSaving" class="header-save-action">
+          Save
+        </span>
+        <span *ngIf="isSaving">
+          <ion-spinner color="light"></ion-spinner>
+        </span>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding">
+  <p class="heading-text">Please fill in the information below</p>
+  <div class="outer-form">
+    <ion-input maxlength="50" type="text" placeholder="Enter name here" [(ngModel)]="record.name"></ion-input>
+    <ion-textarea rows="6" maxlength="1000" type="text" placeholder="Enter Purpose here" [(ngModel)]="record.purpose">
+    </ion-textarea>
+    <div class="date-selection" (click)="selectDate();">
+      <span>Select Expiry date</span>
+      <span>{{record.expiryDate}}</span>
+    </div>
+
+    <div class="media-content" *ngIf="record?.audios?.length || record?.images?.length">
+      <h3 class="heading">Media</h3>
+
+      <div class="scrolling-wrapper-flexbox" *ngIf="record.images?.length">
+        <div class="card" *ngFor="let item of record.images;let i =index">
+          <ion-icon name="ios-close-circle" (click)="removeMedia(i,'image')"></ion-icon>
+          <div class="img-div" [ngStyle]="{'background-image':'url('+item.url+')'}"></div>
+        </div>
+      </div>
+
+      <div *ngFor="let audio of record?.audios; let i =index" class="shared-person">
+        <app-audio-player base64='{{audio.base64String}}' audioURL='{{audio.url}}'></app-audio-player>
+        <ion-icon name="ios-close" class="close-btn" (click)="removeMedia(i,'audio')"></ion-icon>
+      </div>
+
+      <div *ngFor="let video of record?.videos; let i =index" class="shared-person">
+        <ion-icon name="ios-close" class="close-btn" (click)="removeMedia(i,'video')"></ion-icon>
+        <app-video videoString="{{video.nativeUrl}}"></app-video>
+      </div>
+
+    </div>
+
+    <div class="select-media" (click)="selectFile();">
+      <span>
+        Optional File Upload
+      </span>
+    </div>
+  </div>
+</ion-content>
